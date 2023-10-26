@@ -1,0 +1,47 @@
+package Sets;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Sample1 {
+
+	public static void main(String[] args) {
+	
+		
+		//Hashset doesnt follow insertion order, doesnt display duplicate values, displays null values
+		Set<String> set = new HashSet<String>();
+		set.add("Alice");
+		set.add("Bommmmb");
+		set.add("Carol");
+		set.add("Carol");
+		set.add(null);
+				
+		
+		System.out.println(set);
+		System.out.println(set.remove("carol"));
+		
+		
+		//LinkedHashSet follows insertion order,also doesnt display duplicate values and display snull
+		Set<Integer> set1=new LinkedHashSet<Integer>();
+		set1.add(10);
+		set1.add(0);
+		set1.add(15);
+		set1.add(0);
+		set1.add(null);
+		
+		System.out.println(set1);
+	//TreeSet 
+		Set<Integer> set2=new TreeSet<Integer>();
+		set2.add(10);
+		set2.add(0);
+		set2.add(15);
+		set2.add(10);
+		//set2.add(null);//Exception in thread "main" java.lang.NullPointerException
+		
+		System.out.println(set2);
+		
+	}
+
+}
